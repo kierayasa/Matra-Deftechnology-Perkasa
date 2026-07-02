@@ -4,7 +4,7 @@
 .products-intro-bg {
     width: 100%;
     min-height: 700px; /* Adjust height based on your visual preference */
-    background: url('../images/products-intro.png');
+    background: url('../images/products-intro-web.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -236,7 +236,7 @@
 }
 
 /* Learn More / Find Out More Button Styles */
-.learn-more-btn {
+.find-more-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -250,7 +250,167 @@
     margin-top: auto; /* Locks button cleanly to card floor lines */
 }
 
-.learn-more-btn:hover {
+.find-more-btn:hover {
     background-color: var(--secondary-blue);
     color: var(--pure-white);
+}
+
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px); /* Slight background blur */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-product-image {
+  width: 100%;
+  max-height: 600px; /* Caps the height so it doesn't push the text off-screen */
+  object-fit: cover; /* Options: use 'contain' if you want to see the whole asset, or 'cover' to crop fill the rectangle */
+  background-color: #f5f5f5; /* Clean light gray backing in case image is transparent/small */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto; /* Centers the image if it doesn't fill the full width */
+}
+
+/* The actual center pop-up box */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button layout */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Class added by JS to display the modal */
+.modal-overlay.active {
+  display: flex;
+}
+
+/* Smooth pop-up scaling animation */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+@media (max-width: 1024px) {
+    .intro-container-right {
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .product-grid {
+        gap: 25px;
+        padding: 0 20px;
+    }
+}
+
+/* Mobile Devices (Tablets down to Smartphones) */
+@media (max-width: 768px) {
+    /* Intro Section Adjustments */
+    .products-intro-bg {
+        min-height: auto; /* Allow content to dictate height */
+        padding: 40px 0;
+        background-image: url('../images/products-intro-mobile.png');
+    }
+
+    .intro-container-right {
+        grid-template-columns: 1fr; /* Stack into a single column */
+        gap: 0;
+    }
+
+    .intro-spacer {
+        display: none; /* Hide the layout spacer so text occupies full width */
+    }
+
+    .intro-content-box {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9); /* Makes text readable if background image interferes */
+        border-radius: 8px;
+    }
+
+    .intro-title {
+        font-size: 1.8rem;
+    }
+
+    /* Category Tabs: Switch to a scrollable row so tabs don't squash or break lines */
+    .category-tabs-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling on iOS */
+    }
+    
+    .category-tabs-container::-webkit-scrollbar {
+        display: none; /* Hides scrollbar for a cleaner mobile app look */
+    }
+
+    .tab-btn {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    /* Product Grid: Fall back to 1 column */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-section {
+        padding: 40px 15px 60px;
+    }
+
+    /* Modal Tweaks */
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-product-image {
+        max-height: 350px; /* Prevents image from hijacking the entire mobile viewport */
+    }
+}
+
+/* Tiny Smartphones */
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+    }
+
+    .slider-container {
+        height: 220px; /* Slightly shorter aspect ratio for compact viewports */
+    }
+
+    .card-info h3 {
+        font-size: 1.25rem;
+    }
 }

@@ -132,4 +132,31 @@
         grid-column: auto;
         max-width: 100%;
     }
+    .services-intro {
+        padding: 40px 0;
+    }
+
+    .intro-container {
+        grid-template-columns: 1fr; /* Switch to a single column layout */
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .intro-image-box {
+        height: 300px; /* Reduce image height for smaller screens */
+    }
+
+    .intro-title {
+        font-size: 1.8rem; /* Slightly smaller heading for mobile/tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-image-box {
+        height: 220px; /* Further reduce image height on mobile */
+    }
+
+    .intro-title {
+        font-size: 1.6rem;
+    }
 }
