@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Enterprise Solutions</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo-container">
+                <img src="../images/logo.png" class="logo-img">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/defese-solutions/">Defense Solutions</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <label for="menu-toggle" class="sidebar-overlay"></label>
+        </div>
+    </header>
+
+    <main>
+        <section id ="defense-solutions" class="products-intro-bg">
+        <div class="intro-container-right">
+            <!-- The Left Side remains an empty layout space so text stays on the right -->
+            <div class="intro-spacer"></div>
+        
+            <!-- Right Side: Content Box -->
+            <div class="intro-content-box">
+                <h1 class="intro-title">Solusi Pertahanan</h1>
+                <p class="intro-text">
+                  PT Matra Deftechnology Perkasa menyediakan berbagai sistem persenjataan FN Herstal yang dirancang untuk memenuhi kebutuhan operasional modern. Produk yang kami hadirkan mengutamakan keandalan, akurasi, daya tahan, serta fleksibilitas penggunaan untuk mendukung berbagai kebutuhan pertahanan dan keamanan.
+                </p>
+                <p>
+                    Dengan dukungan teknologi terkini dan standar manufaktur internasional, produk FN Herstal telah digunakan secara luas oleh berbagai institusi pertahanan dan keamanan di seluruh dunia. Melalui kemitraan strategis dengan FN Herstal Belgia, PT Matra Deftechnology Perkasa berkomitmen menghadirkan solusi persenjataan berkualitas tinggi yang mampu mendukung kesiapan operasional secara optimal.
+                </p>
+            </div>
+        </div>
+        </section>
+
+        <!-- Clothing-Store Style Category Filter Menu -->
+        <div class="category-tabs-container">
+            <button class="tab-btn active" data-target="section-one">Senjata</button>
+            <button class="tab-btn" data-target="section-two">Amunisi</button>
+        </div>
+
+        <!-- ================= SECTION ONE (12 CARDS) ================= -->
+        <section id="section-one" class="product-section active">
+            <div class="product-grid">
+            <!-- CARD 1 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/products/1.1.png" class="slide active">
+                        <img src="../images/products/1.2.png" class="slide">
+                        <img src="../images/products/1.3.png" class="slide">
+                        <img src="../images/products/1.4.png" class="slide">
+                        <img src="../images/products/1.5.png" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Handgun</span>
+                    <h3>FN Five-Seven</h3>
+                    <h4 class="product-sub-title">MK3 MRD</h4>
+                    <p>The ultimate combat handgun</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+             <!-- CARD 2 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Submachine gun</span>
+                    <h3>FN P90 TACTICAL</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p>Currently fielded on all continents and all environments</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 3 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Assult Riffle</span>
+                    <h3>FN ARKA</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p>Combat-proven reliability with enhanced AR-15 ergonomics</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 4 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Assult Riffle</span>
+                    <h3>FN SCAR-L</h3>
+                    <h4 class="product-sub-title">5.56x45mm NATO</h4>
+                    <p>For the most demanding missions</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 5 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Assult Riffle</span>
+                    <h3>FN SCAR-H</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p>For those who get closest to the enemy</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 6 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Grenade Launcher</span>
+                    <h3>FN40GL</h3>
+                    <h4 class="product-sub-title">MK2</h4>
+                    <p>For increased capability to the user</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 7 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Light Machine Gun</span>
+                    <h3>FN MINIMI</h3>
+                    <h4 class="product-sub-title">5.56 MK3</h4>
+                    <p>Adopted on all continents, recently evolved to meet the requirements of the modern soldier</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 8 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Light Machine Gun</span>
+                    <h3>FN MINIMI</h3>
+                    <h4 class="product-sub-title">7.62 MK3</h4>
+                    <p>Powerful, yet lightweight</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 9 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Ultralight Machine Gun</span>
+                    <h3>FN EVOLYS 5.56</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p>Fires like a machine gun, handles like a rifle</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 10 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Ultralight Machine Gun</span>
+                    <h3>FN EVOLYS 7.62</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p>Fires like a machine gun, handles like a rifle</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 11 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Machine Gun</span>
+                    <h3>FN MAG</h3>
+                    <h4 class="product-sub-title">7.62x51mm General Purpose</h4>
+                    <p>Designed and originally manufactured by FN Herstal</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 12 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Machine Gun</span>
+                    <h3>FN MAG TACTICAL</h3>
+                    <h4 class="product-sub-title">7.62x51mm General Purpose</h4>
+                    <p>Designed and originally manufactured by FN Herstal</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 13 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Heavy Machine Gun</span>
+                    <h3>FN M2HB-QCB</h3>
+                    <h4 class="product-sub-title">MK2</h4>
+                    <p>FN Herstal upgrades its iconic .50 cal FN® M2HB-QCB machine gun</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 14 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Remote Weapon Stations</span>
+                    <h3>FN DEFNDER</h3>
+                    <h4 class="product-sub-title">Medium</h4>
+                    <p>State-of-the-art RWS combining heavy firepower with smart modular architecture</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 15 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Remote Weapon Stations</span>
+                    <h3>FN SEA DEFNDER</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p>Well suited for countering asymmetric threats from any naval platform</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 16 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="category-badge">Firearms Training System</span>
+                    <h3>FN VICTOR T</h3>
+                    <h4 class="product-sub-title"></h4>
+                    <p></p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION TWO ================= -->
+        <section id="section-two" class="product-section">
+            <div class="product-grid">
+                <!-- CARD 1 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>7.62X51MM</h3>
+                    <h4 class="product-sub-title">NATO cartridges</h4>
+                    <p>A world standard that ensures safe and reliable operation of rifles and machine guns</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                <!-- CARD 2 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>12.7X99MM</h3>
+                    <h4 class="product-sub-title"> NATO cartridges (.50 cal)</h4>
+                    <p>FN® .50 cal ammunition line now includes a reduced range cartridge</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 3 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>5.56X45MM</h3>
+                    <h4 class="product-sub-title">NATO cartridges</h4>
+                    <p>Designed and originally manufactured by FN Herstal</p>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- CARD 4 -->
+            <div class="product-card">
+                <div class="card-img-wrapper">
+                    <div class="slider-container">
+                        <img src="../images/prod2-a.jpg" class="slide active">
+                        <img src="../images/prod2-b.jpg" class="slide">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>External Mounted Gun System</h3>
+                    <a href="/contact/" class="learn-more-btn">Find Out More
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18">
+                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-col footer-about">
+                <div class="footer-logo">Matra Deftechnology Perkasa</div>
+                <p class="footer-desc">Mitra terpercaya dalam menyediakan solusi pertahanan modern...</p>
+            </div>
+            <div class="footer-col footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/services/">Our Services</a></li>
+                    <li><a href="/products/">Featured Products</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-office">
+                <h4>Our Contact</h4>
+                <ul class="office-details">
+                    <li><strong>Email:</strong><br><a href="mailto:Info@matradp.id">Info@matradp.id</a></li>
+                    <li><strong>Whatsapp:</strong><br>+62 819-1119-5051</li>
+                    <li><strong>Phone:</strong><br>(021) 22604 772</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PT Matra Deftechnology Perkasa  | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Tab Switching JavaScript Integration -->
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.product-section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.target).classList.add('active');
+            });
+        });
+    </script>
+    <script>
+
+    // The Slider Engine Function
+        function changeSlide(button, direction) {
+            const container = button.parentElement;
+            const slides = container.querySelectorAll('.slide');
+            
+            let activeIndex = 0;
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    activeIndex = index;
+                }
+            });
+
+            slides[activeIndex].classList.remove('active');
+
+            let nextIndex = activeIndex + direction;
+            if (nextIndex >= slides.length) {
+                nextIndex = 0;
+            } else if (nextIndex < 0) {
+                nextIndex = slides.length - 1;
+            }
+
+            slides[nextIndex].classList.add('active');
+        }
+</script>
+</body>
+</html>

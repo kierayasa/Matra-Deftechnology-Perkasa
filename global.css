@@ -1,0 +1,327 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --dark-blue: #011e42;
+    --secondary-blue: #1658aa;
+    --pure-white: #ffffff;
+    --off-white: #f8fafc;
+    --text-dark: #333333;
+    --text-muted: #666666;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+main {
+    padding-top: 100px; /* Prevents content from hiding under the fixed header */
+}
+
+/* Typography & Core Layout elements */
+h1, h2, h3 {
+    color: #011e42;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #1658aa;
+    margin: 15px auto 0;
+}
+
+/* Navigation - Desktop Base Style */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--pure-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;  
+    display: block;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-blue);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* Hide Mobile Elements on Desktop */
+.menu-toggle, .hamburger, .sidebar-overlay {
+    display: none;
+}
+
+/* Comprehensive Corporate Footer */
+.site-footer {
+    background-color: var(--dark-blue);
+    color: var(--pure-white);
+    padding: 70px 40px 20px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr; 
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-col h4 {
+    color: var(--pure-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-col h4::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: var(--secondary-blue);
+    margin-top: 8px;
+}
+
+.footer-logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.75;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: var(--pure-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary-blue);
+    opacity: 1;
+    padding-left: 5px; 
+}
+
+.office-details li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.office-details li strong {
+    color: var(--pure-white);
+    opacity: 0.9;
+}
+
+.office-details li a {
+    color: var(--pure-white);
+    text-decoration: none;
+}
+
+.office-details li a:hover {
+    color: var(--secondary-blue);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    width: 100%;
+}
+
+.footer-bottom a {
+    color: var(--pure-white);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Global Mobile Media Queries (Mobile Navbar logic) */
+@media (max-width: 992px) {
+    .logo-img {
+        height: 35px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1010;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #011e42;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; 
+        width: 300px;
+        height: 100vh;
+        background-color: #011e42; 
+        padding: 100px 40px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.15);
+        transition: right 0.4s cubic-bezier(0.05, 0.74, 0.2, 1);
+        z-index: 1005;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .nav-links a {
+        color: #ffffff; 
+        font-size: 1.25rem;
+    }
+
+    .nav-links a:hover {
+        color: #1658aa;
+    }
+
+    .menu-toggle:checked ~ .nav-menu {
+        right: 0; 
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: #ffffff; 
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: #ffffff;
+    }
+
+    .menu-toggle:checked ~ .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1001;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .footer-about {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-footer {
+        padding: 50px 20px 20px;
+    }
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-about {
+        grid-column: span 1;
+    }
+}
