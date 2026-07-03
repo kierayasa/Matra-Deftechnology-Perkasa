@@ -311,7 +311,7 @@
 .modal-content {
   background: #ffffff;
   padding: 20px;
-  max-width: 600px;
+  max-width: 800px;
   width: 90%;
   position: relative;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -336,7 +336,7 @@
 /* Controls the vertical image sizing perfectly */
 .modal-image-gallery .modal-product-image {
   width: 100%;            /* Uses the full width of the modal card box */
-  max-width: 600px;       /* Restricts it from zooming out too wide on desktops */
+  max-width: 800px;       /* Restricts it from zooming out too wide on desktops */
   height:auto;     /* Caps the height to prevent scrolling forever */
   object-fit: contain;    /* Preserves original dimensions without cropping or stretching */
   background-color: #f9f9f9;
