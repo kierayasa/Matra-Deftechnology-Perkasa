@@ -94,13 +94,45 @@
     border-radius: 4px;
 }
 
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.filter-dropdown {
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1a1a1a;
+  cursor: pointer;
+  outline: none;
+  min-width: 220px;
+  transition: border-color 0.2s;
+}
+
+.filter-dropdown:focus {
+  border-color: #111; /* Dark theme focus ring */
+}
+
 /* ==========================================================================
    Product Card Main Grid Structure
    ========================================================================== */
 .product-section {
     display: none;
     background-color: var(--off-white);
-    padding: 60px 20px 80px;
+    padding: 40px 20px 80px;
 }
 
 .product-section.active {

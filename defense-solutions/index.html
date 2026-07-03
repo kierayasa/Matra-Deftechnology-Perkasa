@@ -53,14 +53,29 @@
 
         <div class="category-tabs-container">
             <button class="tab-btn active" data-target="section-one">Senjata</button>
+
             <button class="tab-btn" data-target="section-two">Amunisi</button>
         </div>
 
+
         <!-- ================= SECTION ONE (12 CARDS) ================= -->
         <section id="section-one" class="product-section active">
+            <div class="filter-container">
+            <label for="category-select" class="filter-label">Browse by Category:</label>
+            <select id="category-select" class="filter-dropdown">
+                <option value="all">All Solutions</option>
+                <option value="handguns">Handguns</option>
+                <option value="submachine">Submachine Guns</option>
+                <option value="riffle">Assult Riffle</option>
+                <option value="grenade">Grenade Launcher</option>
+                <option value="machine">Machine Gun</option>
+                <option value="remote">Remote Weapons Station</option>
+                <option value="firearm">Firearms Training System</option>
+            </select>
+        </div>
             <div class="product-grid">
             <!-- CARD 1 -->
-            <div class="product-card">
+            <div class="product-card" data-category="handguns">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
                         <img src="../images/products/1.1.png" class="slide active">
@@ -83,11 +98,11 @@
                 </div>
             </div>
              <!-- CARD 2 -->
-            <div class="product-card">
+            <div class="product-card" data-category="submachine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/2.1.png" class="slide active">
+                        <img src="../images/products/2.2.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -103,11 +118,13 @@
                 </div>
             </div>
                 <!-- CARD 3 -->
-            <div class="product-card">
+            <div class="product-card" data-category="riffle">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/3.1.png" class="slide active">
+                        <img src="../images/products/3.2.png" class="slide">
+                        <img src="../images/products/3.3.png" class="slide">
+                        <img src="../images/products/3.4.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -123,11 +140,13 @@
                 </div>
             </div>
                 <!-- CARD 4 -->
-            <div class="product-card">
+            <div class="product-card" data-category="riffle">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/4.1.png" class="slide active">
+                        <img src="../images/products/4.2.png" class="slide">
+                        <img src="../images/products/4.3.png" class="slide">
+                        <img src="../images/products/4.4.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -143,11 +162,12 @@
                 </div>
             </div>
                 <!-- CARD 5 -->
-            <div class="product-card">
+            <div class="product-card" data-category="riffle">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/5.1.png" class="slide active">
+                        <img src="../images/products/5.2.png" class="slide">
+                        <img src="../images/products/5.3.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -155,7 +175,7 @@
                 <div class="card-info">
                     <span class="category-badge">Assult Riffle</span>
                     <h3>FN SCAR-H</h3>
-                    <h4 class="product-sub-title"></h4>
+                    <h4 class="product-sub-title">7.62x51mm NATO</h4>
                     <p>For those who get closest to the enemy</p>
                     <button class="find-more-btn" data-title="FN Five-Seven" data-img="../images/products/1m.png">
                     Find out more
@@ -163,11 +183,13 @@
                 </div>
             </div>
                 <!-- CARD 6 -->
-            <div class="product-card">
+            <div class="product-card" data-category="grenade">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/6.1.png" class="slide active">
+                        <img src="../images/products/6.2.png" class="slide">
+                        <img src="../images/products/6.3.png" class="slide">
+                        <img src="../images/products/6.4.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -183,11 +205,11 @@
                 </div>
             </div>
                 <!-- CARD 7 -->
-            <div class="product-card">
+            <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/7.1.png" class="slide active">
+                        <img src="../images/products/7.2.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -203,11 +225,11 @@
                 </div>
             </div>
                 <!-- CARD 8 -->
-            <div class="product-card">
+            <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/8.1.png" class="slide active">
+                        <img src="../images/products/8.2.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -223,11 +245,12 @@
                 </div>
             </div>
                 <!-- CARD 9 -->
-            <div class="product-card">
+            <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/9.1.png" class="slide active">
+                        <img src="../images/products/9.2.png" class="slide">
+                        <img src="../images/products/9.3.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -243,11 +266,12 @@
                 </div>
             </div>
                 <!-- CARD 10 -->
-            <div class="product-card">
+            <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/10.1.png" class="slide active">
+                        <img src="../images/products/10.2.png" class="slide">
+                        <img src="../images/products/10.3.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -263,11 +287,12 @@
                 </div>
             </div>
                 <!-- CARD 11 -->
-            <div class="product-card">
+            <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/11.1.png" class="slide active">
+                        <img src="../images/products/11.2.png" class="slide">
+                        <img src="../images/products/11.3.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -283,11 +308,12 @@
                 </div>
             </div>
                 <!-- CARD 12 -->
-            <div class="product-card">
+            <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/12.1.png" class="slide active">
+                        <img src="../images/products/12.2.png" class="slide">
+                        <img src="../images/products/12.3.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -304,10 +330,10 @@
             </div>
             <!-- CARD 13 -->
             <div class="product-card">
-                <div class="card-img-wrapper">
+                <div class="card-img-wrapper" data-category="machine">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/13.1.png" class="slide active">
+                        <img src="../images/products/13.2.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -323,11 +349,12 @@
                 </div>
             </div>
             <!-- CARD 14 -->
-            <div class="product-card">
+            <div class="product-card" data-category="remote" >
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/14.1.png" class="slide active">
+                        <img src="../images/products/14.2.png" class="slide">
+                        <img src="../images/products/14.3.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -343,11 +370,10 @@
                 </div>
             </div>
             <!-- CARD 15 -->
-            <div class="product-card">
+            <div class="product-card" data-category="remote">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/15.1.png" class="slide active">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -363,13 +389,11 @@
                 </div>
             </div>
             <!-- CARD 16 -->
-            <div class="product-card">
+            <div class="product-card" data-category="firearm">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
-                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
-                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                        <img src="../images/products/16.1.png" class="slide active">
+                        <img src="../images/products/16.2.png" class="slide">
                     </div>
                 </div>
                 <div class="card-info">
@@ -392,10 +416,7 @@
             <div class="product-card">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
-                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
-                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                        <img src="../images/products/2-1.png" class="slide active">
                     </div>
                 </div>
                 <div class="card-info">
@@ -411,10 +432,7 @@
             <div class="product-card">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
-                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
-                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                        <img src="../images/products/2-2.png" class="slide active">
                     </div>
                 </div>
                 <div class="card-info">
@@ -430,10 +448,7 @@
             <div class="product-card">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
-                        <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
-                        <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
+                        <img src="../images/products/2-3.png" class="slide active">
                     </div>
                 </div>
                 <div class="card-info">
@@ -449,8 +464,8 @@
             <div class="product-card">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
-                        <img src="../images/prod2-a.jpg" class="slide active">
-                        <img src="../images/prod2-b.jpg" class="slide">
+                        <img src="../images/products/2-4.1.png" class="slide active">
+                        <img src="../images/products/2-4.2.png" class="slide">
                         <button class="slider-btn prev-btn" onclick="changeSlide(this, -1)">&#10094;</button>
                         <button class="slider-btn next-btn" onclick="changeSlide(this, 1)">&#10095;</button>
                     </div>
@@ -479,7 +494,7 @@
         <div class="footer-wrapper">
             <div class="footer-col footer-about">
                 <div class="footer-logo">Matra Deftechnology Perkasa</div>
-                <p class="footer-desc">Mitra terpercaya dalam menyediakan solusi pertahanan modern...</p>
+                <p class="footer-desc">Mitra terpercaya dalam menyediakan solusi pertahanan modern untuk mendukung kekuatan dan kemandirian pertahanan Republik Indonesia</p>
             </div>
             <div class="footer-col footer-links">
                 <h4>Quick Links</h4>
@@ -596,6 +611,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+</script>
+<script>
+const categorySelect = document.getElementById('category-select');
+
+if (categorySelect) {
+  categorySelect.addEventListener('change', (e) => {
+    // .toLowerCase() and .trim() prevent any casing or spacing typos from breaking the match
+    const selectedValue = e.target.value.trim().toLowerCase(); 
+    const productCards = document.querySelectorAll('.product-card');
+
+    productCards.forEach(card => {
+      // Clean up the card attribute values as well to ensure a match
+      const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
+
+      if (selectedValue === 'all' || cardCategory === selectedValue) {
+        // Clear inline display block styles so your original CSS layout defaults take back over safely
+        card.style.display = ''; 
+        card.style.visibility = 'visible';
+        card.style.opacity = '1';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
 </script>
 </body>
 </html>
