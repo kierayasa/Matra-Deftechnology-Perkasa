@@ -25,7 +25,7 @@
                     <li><a href="../index.html#about">About Us</a></li>
                     <li><a href="../services/index.html">Services</a></li>
                     <li><a href="index.html">Defense Solutions</a></li>
-                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
                 </ul>
             </nav>
             <label for="menu-toggle" class="sidebar-overlay"></label>
@@ -484,9 +484,13 @@
                     <h3>7.62X51MM</h3>
                     <h4 class="product-sub-title">NATO cartridges</h4>
                     <p>A world standard that ensures safe and reliable operation of rifles and machine guns</p>
-                    <button class="find-more-btn" data-title="FN Five-Seven" data-img="../images/products/1m.png">
-                    Find out more
-                    </button>
+                    <button class="find-more-btn" 
+        data-title="7.62X51MM" 
+        data-subtitle="NATO cartridges"
+        data-img1="../images/products/2-1m.1.png" 
+        data-img2="../images/products/2-1m.2.png"  >
+    Find out more
+</button>
                 </div>
             </div>
                 <!-- CARD 2 -->
@@ -498,11 +502,15 @@
                 </div>
                 <div class="card-info">
                     <h3>12.7X99MM</h3>
-                    <h4 class="product-sub-title"> NATO cartridges (.50 cal)</h4>
+                    <h4 class="product-sub-title">NATO cartridges (.50 cal)</h4>
                     <p>FN® .50 cal ammunition line now includes a reduced range cartridge</p>
-                    <button class="find-more-btn" data-title="FN Five-Seven" data-img="../images/products/1m.png">
-                    Find out more
-                    </button>
+                    <button class="find-more-btn" 
+        data-title="12.7X99MM" 
+        data-subtitle="NATO cartridges (.50 cal)"
+        data-img1="../images/products/2-2m.1.png" 
+        data-img2="../images/products/2-2m.2.png"  >
+    Find out more
+</button>
                 </div>
             </div>
             <!-- CARD 3 -->
@@ -516,9 +524,13 @@
                     <h3>5.56X45MM</h3>
                     <h4 class="product-sub-title">NATO cartridges</h4>
                     <p>Designed and originally manufactured by FN Herstal</p>
-                    <button class="find-more-btn" data-title="FN Five-Seven" data-img="../images/products/1m.png">
-                    Find out more
-                    </button>
+                    <button class="find-more-btn" 
+        data-title="5.56X45MM" 
+        data-subtitle="NATO cartridges"
+        data-img1="../images/products/2-3m.1.png" 
+        data-img2="../images/products/2-3m.2.png"  >
+    Find out more
+</button>
                 </div>
             </div>
             <!-- CARD 4 -->
@@ -533,9 +545,13 @@
                 </div>
                 <div class="card-info">
                     <h3>External Mounted Gun System</h3>
-                    <button class="find-more-btn" data-title="FN Five-Seven" data-img="../images/products/1m.png">
-                    Find out more
-                    </button>
+                    <button class="find-more-btn" 
+        data-title="External Mounted Gun System" 
+        data-subtitle=""
+        data-img1="../images/products/2-4m.1.png" 
+        data-img2="../images/products/2-4m.2.png"  >
+    Find out more
+</button>
                 </div>
             </div>
         </section>
@@ -572,7 +588,7 @@
                     <li><a href="../index.html#about">About Us</a></li>
                     <li><a href="../services/index.html">Our Services</a></li>
                     <li><a href="index.html">Featured Products</a></li>
-                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col footer-office">
@@ -592,17 +608,32 @@
     <!-- Tab Switching JavaScript Integration -->
     <script>
         const tabs = document.querySelectorAll('.tab-btn');
-        const sections = document.querySelectorAll('.product-section');
+const sections = document.querySelectorAll('.product-section');
+const categorySelect = document.getElementById('category-select'); // Grab your dropdown menu
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                sections.forEach(s => s.classList.remove('active'));
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // 1. Manage active styling states on buttons and panels
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
 
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.target).classList.add('active');
-            });
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+
+        // 2. THE FIX: Reset the dropdown selection to "All" when switching tabs
+        if (categorySelect) {
+            categorySelect.value = 'all'; 
+        }
+
+        // 3. Instantly reset and show all product cards on the entire page
+        const allProductCards = document.querySelectorAll('.product-card');
+        allProductCards.forEach(card => {
+            card.style.display = ''; 
+            card.style.visibility = 'visible';
+            card.style.opacity = '1';
         });
+    });
+});
     </script>
     <script>
 
@@ -639,13 +670,14 @@
   if (categorySelect) {
     categorySelect.addEventListener('change', (e) => {
       const selectedValue = e.target.value.trim().toLowerCase(); 
-      const productCards = document.querySelectorAll('.product-card');
+      
+      // SCOPED FIX: Only find and filter product cards inside section-one
+      const sectionOneCards = document.querySelectorAll('#section-one .product-card');
 
-      productCards.forEach(card => {
+      sectionOneCards.forEach(card => {
         const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
 
         if (selectedValue === 'all' || cardCategory === selectedValue) {
-          // Clears inline hidden styles so original layout flex/grid properties remain sound
           card.style.display = ''; 
           card.style.visibility = 'visible';
           card.style.opacity = '1';
