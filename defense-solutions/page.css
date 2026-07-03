@@ -287,57 +287,86 @@
     color: var(--pure-white);
 }
 
+/* 1. Make the outer overlay scrollable on smaller laptop/mobile screens */
 .modal-overlay {
-  display: none; /* Hidden by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px); /* Slight background blur */
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  /* The secret sauce to allow the entire box to slide down if it’s massive */
+  overflow-y: auto; 
+  padding: 20px 0;
 }
 
-.modal-product-image {
-  width: 100%;
-  max-height: 600px; /* Caps the height so it doesn't push the text off-screen */
-  object-fit: cover; /* Options: use 'contain' if you want to see the whole asset, or 'cover' to crop fill the rectangle */
-  background-color: #f5f5f5; /* Clean light gray backing in case image is transparent/small */
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto; /* Centers the image if it doesn't fill the full width */
-}
-
-/* The actual center pop-up box */
+/* 2. Constrain the pop-up card itself so content scrolls inside it */
 .modal-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 800px;
+  background: #ffffff;
+  padding: 20px;
+  max-width: 600px;
   width: 90%;
   position: relative;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 85vh; 
+  overflow-y: auto; 
+  -webkit-overflow-scrolling: touch; 
 }
 
-/* Close button layout */
+/* Stacks the images vertically one after another */
+.modal-image-gallery {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    /* Centers the images horizontally */
+  width: 100%;
+  margin: 0;
+}
+
+/* Controls the vertical image sizing perfectly */
+.modal-image-gallery .modal-product-image {
+  width: 100%;            /* Uses the full width of the modal card box */
+  max-width: 600px;       /* Restricts it from zooming out too wide on desktops */
+  height:auto;     /* Caps the height to prevent scrolling forever */
+  object-fit: contain;    /* Preserves original dimensions without cropping or stretching */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.modal-product-image:not([src]), 
+.modal-product-image[src=""] {
+  display: none ;
+}
+
+/* 3. Keep the close button fixed to the top right corner so it doesn't scroll away */
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
+  position: sticky;
+  top: -20px;       /* Anchors it inside the top padding boundary */
+  align-self: flex-end;
+  margin-bottom: -30px; /* Prevents it from shoving down the title text layout */
   background: none;
   border: none;
+  font-size: 2rem;
   cursor: pointer;
+  z-index: 10;
   color: #333;
 }
-
-/* Class added by JS to display the modal */
 .modal-overlay.active {
   display: flex;
+  opacity: 1;              /* Makes the modal visible */
+  pointer-events: auto;     /* Re-enables clicking on and inside the modal */
 }
 
 /* Smooth pop-up scaling animation */
