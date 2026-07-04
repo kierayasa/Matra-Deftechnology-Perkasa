@@ -1,9 +1,7 @@
-/* ==========================================================================
-   Intro & Layout Baseline Frameworks
-   ========================================================================== */
+/* Intro */
 .products-intro-bg {
     width: 100%;
-    min-height: 700px; /* Adjust height based on your visual preference */
+    min-height: 700px; 
     background: url('../images/products-intro-web.png');
     background-size: cover;
     background-position: center;
@@ -20,12 +18,11 @@
     width: 100%;
     
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Left spacer column takes 1 part, text takes 1.2 parts */
+    grid-template-columns: 1fr 1.2fr; 
     gap: 50px;
 }
 
 .intro-spacer {
-    /* Kept completely empty to force the layout engine to leave the left side blank */
     display: block;
 }
 
@@ -49,9 +46,8 @@
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   Clothing Web Shop Category Tabs Menu Styling
-   ========================================================================== */
+/* Category Tabs */
+
 .category-tabs-container {
     display: flex;
     justify-content: center;
@@ -78,7 +74,6 @@
     color: var(--secondary-blue);
 }
 
-/* Tab active state accent under-bar rules */
 .tab-btn.active {
     color: var(--dark-blue);
 }
@@ -126,9 +121,8 @@
   border-color: #111; /* Dark theme focus ring */
 }
 
-/* ==========================================================================
-   Product Card Main Grid Structure
-   ========================================================================== */
+/* Product Card Grid */
+
 .product-section {
     display: none;
     background-color: var(--off-white);
@@ -141,7 +135,7 @@
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Enforces exactly two per row on desktops */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
@@ -157,9 +151,6 @@
     width: 100%;
 }
 
-/* ==========================================================================
-   Active JS Slider Content Frame Setup
-   ========================================================================== */
 .card-img-wrapper {
     width: 100%;
     margin-bottom: 20px;
@@ -186,13 +177,11 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Switches picture visibilities on active state script calls */
 .slider-container .slide.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Navigation Arrow Overlays */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -221,9 +210,8 @@
 .prev-btn { left: 12px; }
 .next-btn { right: 12px; }
 
-/* ==========================================================================
-   Card Info Details & Content Styling
-   ========================================================================== */
+/* Card Info */
+
 .card-info {
     display: flex;
     flex-direction: column;
@@ -232,13 +220,12 @@
     height: 100%;
 }
 
-/* Oval Shaped Category Badge */
 .category-badge {
     display: inline-block;
     background-color: #e0f2fe;
     color: #0369a1;
     padding: 6px 16px;
-    border-radius: 50px; /* Fully rounds left and right sides into an oval shape */
+    border-radius: 50px; 
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -267,7 +254,6 @@
     margin-bottom: 25px;
 }
 
-/* Learn More / Find Out More Button Styles */
 .find-more-btn {
     display: inline-flex;
     align-items: center;
@@ -279,7 +265,7 @@
     font-weight: 600;
     border-radius: 4px;
     transition: all 0.3s ease;
-    margin-top: auto; /* Locks button cleanly to card floor lines */
+    margin-top: auto; 
 }
 
 .find-more-btn:hover {
@@ -287,7 +273,6 @@
     color: var(--pure-white);
 }
 
-/* 1. Make the outer overlay scrollable on smaller laptop/mobile screens */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -302,12 +287,10 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  /* The secret sauce to allow the entire box to slide down if it’s massive */
   overflow-y: auto; 
   padding: 20px 0;
 }
 
-/* 2. Constrain the pop-up card itself so content scrolls inside it */
 .modal-content {
   background: #ffffff;
   padding: 20px;
@@ -324,21 +307,19 @@
   -webkit-overflow-scrolling: touch; 
 }
 
-/* Stacks the images vertically one after another */
 .modal-image-gallery {
   display: flex;
   flex-direction: column; 
-  align-items: center;    /* Centers the images horizontally */
+  align-items: center;
   width: 100%;
   margin: 0;
 }
 
-/* Controls the vertical image sizing perfectly */
 .modal-image-gallery .modal-product-image {
-  width: 100%;            /* Uses the full width of the modal card box */
-  max-width: 800px;       /* Restricts it from zooming out too wide on desktops */
-  height:auto;     /* Caps the height to prevent scrolling forever */
-  object-fit: contain;    /* Preserves original dimensions without cropping or stretching */
+  width: 100%;           
+  max-width: 800px;      
+  height:auto;    
+  object-fit: contain;  
   background-color: #f9f9f9;
   border-radius: 8px;
   padding: 5px;
@@ -350,12 +331,11 @@
   display: none ;
 }
 
-/* 3. Keep the close button fixed to the top right corner so it doesn't scroll away */
 .close-btn {
   position: sticky;
-  top: -20px;       /* Anchors it inside the top padding boundary */
+  top: -20px;      
   align-self: flex-end;
-  margin-bottom: -30px; /* Prevents it from shoving down the title text layout */
+  margin-bottom: -30px; 
   background: none;
   border: none;
   font-size: 2rem;
@@ -363,13 +343,13 @@
   z-index: 10;
   color: #333;
 }
+
 .modal-overlay.active {
   display: flex;
-  opacity: 1;              /* Makes the modal visible */
-  pointer-events: auto;     /* Re-enables clicking on and inside the modal */
+  opacity: 1;              
+  pointer-events: auto;     
 }
 
-/* Smooth pop-up scaling animation */
 @keyframes fadeIn {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -388,27 +368,25 @@
     }
 }
 
-/* Mobile Devices (Tablets down to Smartphones) */
 @media (max-width: 768px) {
-    /* Intro Section Adjustments */
     .products-intro-bg {
-        min-height: auto; /* Allow content to dictate height */
+        min-height: auto; 
         padding: 40px 0;
         background-image: url('../images/products-intro-mobile.png');
     }
 
     .intro-container-right {
-        grid-template-columns: 1fr; /* Stack into a single column */
+        grid-template-columns: 1fr; 
         gap: 0;
     }
 
     .intro-spacer {
-        display: none; /* Hide the layout spacer so text occupies full width */
+        display: none; 
     }
 
     .intro-content-box {
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.9); /* Makes text readable if background image interferes */
+        background-color: rgba(255, 255, 255, 0.9); 
         border-radius: 8px;
     }
 
@@ -416,7 +394,6 @@
         font-size: 1.8rem;
     }
 
-    /* Category Tabs: Switch to a scrollable row so tabs don't squash or break lines */
     .category-tabs-container {
         justify-content: flex-start;
         overflow-x: auto;
@@ -424,11 +401,11 @@
         padding-left: 15px;
         padding-right: 15px;
         gap: 10px;
-        -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling on iOS */
+        -webkit-overflow-scrolling: touch;
     }
     
     .category-tabs-container::-webkit-scrollbar {
-        display: none; /* Hides scrollbar for a cleaner mobile app look */
+        display: none; 
     }
 
     .tab-btn {
@@ -436,7 +413,6 @@
         font-size: 1rem;
     }
 
-    /* Product Grid: Fall back to 1 column */
     .product-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -446,18 +422,16 @@
         padding: 40px 15px 60px;
     }
 
-    /* Modal Tweaks */
     .modal-content {
         padding: 20px;
         width: 95%;
     }
 
     .modal-product-image {
-        max-height: 350px; /* Prevents image from hijacking the entire mobile viewport */
+        max-height: 350px;
     }
 }
 
-/* Tiny Smartphones */
 @media (max-width: 480px) {
     .intro-title {
         font-size: 1.5rem;
@@ -468,7 +442,7 @@
     }
 
     .slider-container {
-        height: 220px; /* Slightly shorter aspect ratio for compact viewports */
+        height: 220px; 
     }
 
     .card-info h3 {

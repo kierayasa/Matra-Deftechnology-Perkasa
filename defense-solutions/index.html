@@ -11,34 +11,39 @@
 
     <!-- Navigation -->
     <header class="navbar">
+
         <div class="nav-container">
             <div class="logo-container">
                 <img src="../images/logo.png" class="logo-img">
             </div>
+
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger">
                 <span></span><span></span><span></span>
             </label>
+
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#about">About Us</a></li>
-                    <li><a href="../services/index.html">Services</a></li>
-                    <li><a href="index.html">Defense Solutions</a></li>
-                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="../index.html#about">Tentang Kami</a></li>
+                    <li><a href="../services/index.html">Layanan Kami</a></li>
+                    <li><a href="index.html">Solusi Pertahanan</a></li>
+                    <li><a href="../contact/index.html">Hubungi Kami</a></li>
                 </ul>
             </nav>
+
             <label for="menu-toggle" class="sidebar-overlay"></label>
+
         </div>
     </header>
 
     <main>
+        <!-- Intro Section -->
         <section id ="products" class="products-intro-bg">
         <div class="intro-container-right">
-            <!-- The Left Side remains an empty layout space so text stays on the right -->
-            <div class="intro-spacer"></div>
+            <div class="intro-spacer">
+            </div>
         
-            <!-- Right Side: Content Box -->
             <div class="intro-content-box">
                 <h1 class="intro-title">Solusi Pertahanan</h1>
                 <p class="intro-text">
@@ -48,32 +53,36 @@
                     Dengan dukungan teknologi terkini dan standar manufaktur internasional, produk FN Herstal telah digunakan secara luas oleh berbagai institusi pertahanan dan keamanan di seluruh dunia. Melalui kemitraan strategis dengan FN Herstal Belgia, PT Matra Deftechnology Perkasa berkomitmen menghadirkan solusi persenjataan berkualitas tinggi yang mampu mendukung kesiapan operasional secara optimal.
                 </p>
             </div>
+
         </div>
         </section>
 
+        <!-- Tabs Section -->
         <div class="category-tabs-container">
             <button class="tab-btn active" data-target="section-one">Senjata</button>
-
             <button class="tab-btn" data-target="section-two">Amunisi</button>
         </div>
 
 
-        <!-- ================= SECTION ONE (12 CARDS) ================= -->
+        <!-- SECTION ONE -->
         <section id="section-one" class="product-section active">
+
             <div class="filter-container">
-            <label for="category-select" class="filter-label">Browse by Category:</label>
-            <select id="category-select" class="filter-dropdown">
-                <option value="all">All Solutions</option>
-                <option value="handguns">Handguns</option>
-                <option value="submachine">Submachine Guns</option>
-                <option value="riffle">Assult Riffle</option>
-                <option value="grenade">Grenade Launcher</option>
-                <option value="machine">Machine Gun</option>
-                <option value="remote">Remote Weapons Station</option>
-                <option value="firearm">Firearms Training System</option>
-            </select>
-        </div>
+                <label for="category-select" class="filter-label">Kategori:</label>
+                <select id="category-select" class="filter-dropdown">
+                    <option value="all">Semua</option>
+                    <option value="handguns">Handguns</option>
+                    <option value="submachine">Submachine Guns</option>
+                    <option value="riffle">Assult Riffle</option>
+                    <option value="grenade">Grenade Launcher</option>
+                    <option value="machine">Machine Gun</option>
+                    <option value="remote">Remote Weapons Station</option>
+                    <option value="firearm">Firearms Training System</option>
+                </select>
+            </div>
+
             <div class="product-grid">
+
             <!-- CARD 1 -->
             <div class="product-card" data-category="handguns">
                 <div class="card-img-wrapper">
@@ -91,17 +100,17 @@
                     <span class="category-badge">Handgun</span>
                     <h3>FN Five-Seven</h3>
                     <h4 class="product-sub-title">MK3 MRD</h4>
-                    <p>The ultimate combat handgun</p>
                     <button class="find-more-btn" 
-        data-title="FN Five-Seven" 
-        data-subtitle="MK3 MRD"
-        data-img1="../images/products/1m.1.png" 
-        data-img2="../images/products/1m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN Five-Seven" 
+                        data-subtitle="MK3 MRD"
+                        data-img1="../images/products/1m.1.png" 
+                        data-img2="../images/products/1m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-             <!-- CARD 2 -->
+
+            <!-- CARD 2 -->
             <div class="product-card" data-category="submachine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -115,17 +124,17 @@
                     <span class="category-badge">Submachine gun</span>
                     <h3>FN P90 TACTICAL</h3>
                     <h4 class="product-sub-title"></h4>
-                    <p>Currently fielded on all continents and all environments</p>
                     <button class="find-more-btn" 
-        data-title="FN P90 TACTICAL" 
-        data-subtitle=""
-        data-img1="../images/products/2m.1.png" 
-        data-img2="../images/products/2m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN P90 TACTICAL" 
+                        data-subtitle=""
+                        data-img1="../images/products/2m.1.png" 
+                        data-img2="../images/products/2m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 3 -->
+
+            <!-- CARD 3 -->
             <div class="product-card" data-category="riffle">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -141,17 +150,17 @@
                     <span class="category-badge">Assult Riffle</span>
                     <h3>FN ARKA</h3>
                     <h4 class="product-sub-title"></h4>
-                    <p>Combat-proven reliability with enhanced AR-15 ergonomics</p>
                     <button class="find-more-btn" 
-        data-title="FN ARKA" 
-        data-subtitle=""
-        data-img1="../images/products/3m.1.png" 
-        data-img2="../images/products/3m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN ARKA" 
+                        data-subtitle=""
+                        data-img1="../images/products/3m.1.png" 
+                        data-img2="../images/products/3m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 4 -->
+
+            <!-- CARD 4 -->
             <div class="product-card" data-category="riffle">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -167,16 +176,16 @@
                     <span class="category-badge">Assult Riffle</span>
                     <h3>FN SCAR-L</h3>
                     <h4 class="product-sub-title">5.56x45mm NATO</h4>
-                    <p>For the most demanding missions</p>
                     <button class="find-more-btn" 
-        data-title="FN SCAR-L" 
-        data-subtitle="5.56x45mm NATO"
-        data-img1="../images/products/4m.1.png"  >
-    Find out more
-</button>
+                        data-title="FN SCAR-L" 
+                        data-subtitle="5.56x45mm NATO"
+                        data-img1="../images/products/4m.1.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 5 -->
+
+            <!-- CARD 5 -->
             <div class="product-card" data-category="riffle">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -191,16 +200,16 @@
                     <span class="category-badge">Assult Riffle</span>
                     <h3>FN SCAR-H</h3>
                     <h4 class="product-sub-title">7.62x51mm NATO</h4>
-                    <p>For those who get closest to the enemy</p>
                     <button class="find-more-btn" 
-        data-title="FN SCAR-H" 
-        data-subtitle="7.62x51mm NATO"
-        data-img1="../images/products/5m.1.png"  >
-    Find out more
-</button>
+                        data-title="FN SCAR-H" 
+                        data-subtitle="7.62x51mm NATO"
+                        data-img1="../images/products/5m.1.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 6 -->
+
+            <!-- CARD 6 -->
             <div class="product-card" data-category="grenade">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -216,16 +225,16 @@
                     <span class="category-badge">Grenade Launcher</span>
                     <h3>FN40GL</h3>
                     <h4 class="product-sub-title">MK2</h4>
-                    <p>For increased capability to the user</p>
                     <button class="find-more-btn" 
-        data-title="FN40GL" 
-        data-subtitle="MK2"
-        data-img1="../images/products/6m.1.png" >
-    Find out more
-</button>
+                        data-title="FN40GL" 
+                        data-subtitle="MK2"
+                        data-img1="../images/products/6m.1.png" >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 7 -->
+
+            <!-- CARD 7 -->
             <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -239,17 +248,17 @@
                     <span class="category-badge">Light Machine Gun</span>
                     <h3>FN MINIMI</h3>
                     <h4 class="product-sub-title">5.56 MK3</h4>
-                    <p>Adopted on all continents, recently evolved to meet the requirements of the modern soldier</p>
                     <button class="find-more-btn" 
-        data-title="FN MINIMI" 
-        data-subtitle="5.56 MK3"
-        data-img1="../images/products/7m.1.png" 
-        data-img2="../images/products/7m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN MINIMI" 
+                        data-subtitle="5.56 MK3"
+                        data-img1="../images/products/7m.1.png" 
+                        data-img2="../images/products/7m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 8 -->
+
+            <!-- CARD 8 -->
             <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -263,17 +272,17 @@
                     <span class="category-badge">Light Machine Gun</span>
                     <h3>FN MINIMI</h3>
                     <h4 class="product-sub-title">7.62 MK3</h4>
-                    <p>Powerful, yet lightweight</p>
                     <button class="find-more-btn" 
-        data-title="FN MINIMI" 
-        data-subtitle="7.62 MK3"
-        data-img1="../images/products/8m.1.png" 
-        data-img2="../images/products/8m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN MINIMI" 
+                        data-subtitle="7.62 MK3"
+                        data-img1="../images/products/8m.1.png" 
+                        data-img2="../images/products/8m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 9 -->
+
+            <!-- CARD 9 -->
             <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -286,19 +295,19 @@
                 </div>
                 <div class="card-info">
                     <span class="category-badge">Ultralight Machine Gun</span>
-                    <h3>FN EVOLYS</h3>
-                    <h4 class="product-sub-title">5.56</h4>
-                    <p>Fires like a machine gun, handles like a rifle</p>
+                    <h3>FN EVOLYS 5.56</h3>
+                    <h4 class="product-sub-title"></h4>
                     <button class="find-more-btn" 
-        data-title="FN EVOLYS" 
-        data-subtitle="5.56"
-        data-img1="../images/products/9m.1.png" 
-        data-img2="../images/products/9m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN EVOLYS" 
+                        data-subtitle="5.56"
+                        data-img1="../images/products/9m.1.png" 
+                        data-img2="../images/products/9m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 10 -->
+
+            <!-- CARD 10 -->
             <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -311,19 +320,19 @@
                 </div>
                 <div class="card-info">
                     <span class="category-badge">Ultralight Machine Gun</span>
-                    <h3>FN EVOLYS</h3>
-                    <h4 class="product-sub-title">7.62</h4>
-                    <p>Fires like a machine gun, handles like a rifle</p>
+                    <h3>FN EVOLYS 7.62</h3>
+                    <h4 class="product-sub-title"></h4>
                     <button class="find-more-btn" 
-        data-title="FN EVOLYS" 
-        data-subtitle="7.62"
-        data-img1="../images/products/10m.1.png" 
-        data-img2="../images/products/10m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN EVOLYS" 
+                        data-subtitle="7.62"
+                        data-img1="../images/products/10m.1.png" 
+                        data-img2="../images/products/10m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 11 -->
+                
+            <!-- CARD 11 -->
             <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -338,17 +347,17 @@
                     <span class="category-badge">Machine Gun</span>
                     <h3>FN MAG</h3>
                     <h4 class="product-sub-title">7.62x51mm General Purpose</h4>
-                    <p>Designed and originally manufactured by FN Herstal</p>
                     <button class="find-more-btn" 
-        data-title="FN MAG" 
-        data-subtitle="7.62x51mm General Purpose"
-        data-img1="../images/products/11m.1.png" 
-        data-img2="../images/products/11m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN MAG" 
+                        data-subtitle="7.62x51mm General Purpose"
+                        data-img1="../images/products/11m.1.png" 
+                        data-img2="../images/products/11m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 12 -->
+                
+            <!-- CARD 12 -->
             <div class="product-card" data-category="machine">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -363,16 +372,16 @@
                     <span class="category-badge">Machine Gun</span>
                     <h3>FN MAG TACTICAL</h3>
                     <h4 class="product-sub-title">7.62x51mm General Purpose</h4>
-                    <p>Designed and originally manufactured by FN Herstal</p>
                     <button class="find-more-btn" 
-        data-title="FN MAG TACTICAL" 
-        data-subtitle="7.62x51mm General Purpose"
-        data-img1="../images/products/12m.1.png" 
-        data-img2="../images/products/12m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN MAG TACTICAL" 
+                        data-subtitle="7.62x51mm General Purpose"
+                        data-img1="../images/products/12m.1.png" 
+                        data-img2="../images/products/12m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
+            
             <!-- CARD 13 -->
             <div class="product-card">
                 <div class="card-img-wrapper" data-category="machine">
@@ -387,16 +396,16 @@
                     <span class="category-badge">Heavy Machine Gun</span>
                     <h3>FN M2HB-QCB</h3>
                     <h4 class="product-sub-title">MK2</h4>
-                    <p>FN Herstal upgrades its iconic .50 cal FN® M2HB-QCB machine gun</p>
                     <button class="find-more-btn" 
-        data-title="FN Five-Seven" 
-        data-subtitle="MK3 MRD"
-        data-img1="../images/products/13m.1.png" 
-        data-img2="../images/products/13m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN Five-Seven" 
+                        data-subtitle="MK3 MRD"
+                        data-img1="../images/products/13m.1.png" 
+                        data-img2="../images/products/13m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
+
             <!-- CARD 14 -->
             <div class="product-card" data-category="remote" >
                 <div class="card-img-wrapper">
@@ -412,16 +421,16 @@
                     <span class="category-badge">Remote Weapon Stations</span>
                     <h3>FN DEFNDER</h3>
                     <h4 class="product-sub-title">Medium</h4>
-                    <p>State-of-the-art RWS combining heavy firepower with smart modular architecture</p>
                     <button class="find-more-btn" 
-        data-title="FN DEFNDER" 
-        data-subtitle="Medium"
-        data-img1="../images/products/14m.1.png" 
-        data-img2="../images/products/14m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN DEFNDER" 
+                        data-subtitle="Medium"
+                        data-img1="../images/products/14m.1.png" 
+                        data-img2="../images/products/14m.2.png"  >
+                    Selengkapnya
+                    </button>
                 </div>
             </div>
+
             <!-- CARD 15 -->
             <div class="product-card" data-category="remote">
                 <div class="card-img-wrapper">
@@ -435,16 +444,16 @@
                     <span class="category-badge">Remote Weapon Stations</span>
                     <h3>FN SEA DEFNDER</h3>
                     <h4 class="product-sub-title"></h4>
-                    <p>Well suited for countering asymmetric threats from any naval platform</p>
                     <button class="find-more-btn" 
-        data-title="FN SEA DEFNDER" 
-        data-subtitle=""
-        data-img1="../images/products/15m.1.png" 
-        data-img2="../images/products/15m.2.png"  >
-    Find out more
-</button>
+                        data-title="FN SEA DEFNDER" 
+                        data-subtitle=""
+                        data-img1="../images/products/15m.1.png" 
+                        data-img2="../images/products/15m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
+
             <!-- CARD 16 -->
             <div class="product-card" data-category="firearm">
                 <div class="card-img-wrapper">
@@ -457,22 +466,22 @@
                     <span class="category-badge">Firearms Training System</span>
                     <h3>FN VICTOR T</h3>
                     <h4 class="product-sub-title"></h4>
-                    <p></p>
                     <button class="find-more-btn" 
-        data-title="Firearms Training System" 
-        data-subtitle="FN VICTOR T"
-        data-img1="../images/products/16m.1.png" 
-        data-img2="../images/products/16m.2.png"  >
-    Find out more
-</button>
+                        data-title="Firearms Training System" 
+                        data-subtitle="FN VICTOR T"
+                        data-img1="../images/products/16m.1.png" 
+                        data-img2="../images/products/16m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
             </div>
         </section>
 
-        <!-- ================= SECTION TWO ================= -->
+        <!-- SECTION TWO -->
         <section id="section-two" class="product-section">
             <div class="product-grid">
+            
                 <!-- CARD 1 -->
             <div class="product-card">
                 <div class="card-img-wrapper">
@@ -483,17 +492,17 @@
                 <div class="card-info">
                     <h3>7.62X51MM</h3>
                     <h4 class="product-sub-title">NATO cartridges</h4>
-                    <p>A world standard that ensures safe and reliable operation of rifles and machine guns</p>
                     <button class="find-more-btn" 
-        data-title="7.62X51MM" 
-        data-subtitle="NATO cartridges"
-        data-img1="../images/products/2-1m.1.png" 
-        data-img2="../images/products/2-1m.2.png"  >
-    Find out more
-</button>
+                        data-title="7.62X51MM" 
+                        data-subtitle="NATO cartridges"
+                        data-img1="../images/products/2-1m.1.png" 
+                        data-img2="../images/products/2-1m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
-                <!-- CARD 2 -->
+                
+            <!-- CARD 2 -->
             <div class="product-card">
                 <div class="card-img-wrapper">
                     <div class="slider-container">
@@ -503,16 +512,16 @@
                 <div class="card-info">
                     <h3>12.7X99MM</h3>
                     <h4 class="product-sub-title">NATO cartridges (.50 cal)</h4>
-                    <p>FN® .50 cal ammunition line now includes a reduced range cartridge</p>
                     <button class="find-more-btn" 
-        data-title="12.7X99MM" 
-        data-subtitle="NATO cartridges (.50 cal)"
-        data-img1="../images/products/2-2m.1.png" 
-        data-img2="../images/products/2-2m.2.png"  >
-    Find out more
-</button>
+                        data-title="12.7X99MM" 
+                        data-subtitle="NATO cartridges (.50 cal)"
+                        data-img1="../images/products/2-2m.1.png" 
+                        data-img2="../images/products/2-2m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
+
             <!-- CARD 3 -->
             <div class="product-card">
                 <div class="card-img-wrapper">
@@ -523,16 +532,16 @@
                 <div class="card-info">
                     <h3>5.56X45MM</h3>
                     <h4 class="product-sub-title">NATO cartridges</h4>
-                    <p>Designed and originally manufactured by FN Herstal</p>
                     <button class="find-more-btn" 
-        data-title="5.56X45MM" 
-        data-subtitle="NATO cartridges"
-        data-img1="../images/products/2-3m.1.png" 
-        data-img2="../images/products/2-3m.2.png"  >
-    Find out more
-</button>
+                        data-title="5.56X45MM" 
+                        data-subtitle="NATO cartridges"
+                        data-img1="../images/products/2-3m.1.png" 
+                        data-img2="../images/products/2-3m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
+            
             <!-- CARD 4 -->
             <div class="product-card">
                 <div class="card-img-wrapper">
@@ -546,98 +555,99 @@
                 <div class="card-info">
                     <h3>External Mounted Gun System</h3>
                     <button class="find-more-btn" 
-        data-title="External Mounted Gun System" 
-        data-subtitle=""
-        data-img1="../images/products/2-4m.1.png" 
-        data-img2="../images/products/2-4m.2.png"  >
-    Find out more
-</button>
+                        data-title="External Mounted Gun System" 
+                        data-subtitle=""
+                        data-img1="../images/products/2-4m.1.png" 
+                        data-img2="../images/products/2-4m.2.png"  >
+                        Selengkapnya
+                    </button>
                 </div>
             </div>
         </section>
 
-            <div id="product-modal" class="modal-overlay">
-    <div class="modal-content">
-        <button class="close-btn">&times;</button>
-        <h2 id="modal-title"></h2>
-        <h4 id="modal-subtitle"></h4>
-        
-        <!-- Image Gallery Wrapper -->
-        <div class="modal-image-gallery">
-            <img id="modal-img1" src="" alt="Product View 1" class="modal-product-image">
-            <img id="modal-img2" src="" alt="Product View 2" class="modal-product-image">
+        <div id="product-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="close-btn">&times;</button>
+                <h2 id="modal-title"></h2>
+                <h4 id="modal-subtitle"></h4>
+
+            <div class="modal-image-gallery">
+                <img id="modal-img1" src="" alt="Product View 1" class="modal-product-image">
+                <img id="modal-img2" src="" alt="Product View 2" class="modal-product-image">
+            </div>
+            </div>
         </div>
-        
-        <div id="modal-description"></div>
-    </div>
-</div>
         
     </main>
 
     <!-- Footer Section -->
     <footer class="site-footer">
         <div class="footer-wrapper">
+
             <div class="footer-col footer-about">
                 <div class="footer-logo">Matra Deftechnology Perkasa</div>
                 <p class="footer-desc">Mitra terpercaya dalam menyediakan solusi pertahanan modern untuk mendukung kekuatan dan kemandirian pertahanan Republik Indonesia</p>
             </div>
+
             <div class="footer-col footer-links">
-                <h4>Quick Links</h4>
+                <h4>Tautan Cepat</h4>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#about">About Us</a></li>
-                    <li><a href="../services/index.html">Our Services</a></li>
-                    <li><a href="index.html">Featured Products</a></li>
-                    <li><a href="../contact/index.html">Contact Us</a></li>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="../index.html#about">Tentang Kami</a></li>
+                    <li><a href="../services/index.html">Layanan Kami</a></li>
+                    <li><a href="index.html">Solusi Pertahanan</a></li>
+                    <li><a href="../contact/index.html">Hubungi Kami</a></li>
                 </ul>
             </div>
+
             <div class="footer-col footer-office">
-                <h4>Our Contact</h4>
+                <h4>Kontak Kami</h4>
                 <ul class="office-details">
                     <li><strong>Email:</strong><br><a href="mailto:Info@matradp.id">Info@matradp.id</a></li>
                     <li><strong>Whatsapp:</strong><br>+62 819-1119-5051</li>
-                    <li><strong>Phone:</strong><br>(021) 22604 772</li>
+                    <li><strong>Telepon:</strong><br>(021) 22604 772</li>
                 </ul>
             </div>
+
         </div>
+
         <div class="footer-bottom">
             <p>&copy; 2026 PT Matra Deftechnology Perkasa  | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
+
     </footer>
 
-    <!-- Tab Switching JavaScript Integration -->
+    <!-- Tab Switching -->
     <script>
         const tabs = document.querySelectorAll('.tab-btn');
-const sections = document.querySelectorAll('.product-section');
-const categorySelect = document.getElementById('category-select'); // Grab your dropdown menu
+        const sections = document.querySelectorAll('.product-section');
+        const categorySelect = document.getElementById('category-select');
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        // 1. Manage active styling states on buttons and panels
-        tabs.forEach(t => t.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('active'));
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
 
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.target).classList.add('active');
+                tab.classList.add('active');
+                    document.getElementById(tab.dataset.target).classList.add('active');
 
-        // 2. THE FIX: Reset the dropdown selection to "All" when switching tabs
-        if (categorySelect) {
-            categorySelect.value = 'all'; 
-        }
+                if (categorySelect) {
+                    categorySelect.value = 'all'; 
+                }
 
-        // 3. Instantly reset and show all product cards on the entire page
-        const allProductCards = document.querySelectorAll('.product-card');
-        allProductCards.forEach(card => {
-            card.style.display = ''; 
-            card.style.visibility = 'visible';
-            card.style.opacity = '1';
+                const allProductCards = document.querySelectorAll('.product-card');
+                    allProductCards.forEach(card => {
+                        card.style.display = ''; 
+                        card.style.visibility = 'visible';
+                        card.style.opacity = '1';
+                });
+            });
         });
-    });
-});
-    </script>
-    <script>
 
-    // The Slider Engine Function
+    </script>
+
+    <!-- Img Slider -->
+    <script>
         function changeSlide(button, direction) {
             const container = button.parentElement;
             const slides = container.querySelectorAll('.slide');
@@ -660,101 +670,90 @@ tabs.forEach(tab => {
 
             slides[nextIndex].classList.add('active');
         }
-</script>
-<script>
-  // ==========================================
-  // 2. DROPDOWN CATEGORY FILTER LOGIC
-  // ==========================================
-  const categorySelect = document.getElementById('category-select');
+    </script>
 
-  if (categorySelect) {
-    categorySelect.addEventListener('change', (e) => {
-      const selectedValue = e.target.value.trim().toLowerCase(); 
-      
-      // SCOPED FIX: Only find and filter product cards inside section-one
-      const sectionOneCards = document.querySelectorAll('#section-one .product-card');
+    <!-- Dropdown Category -->
+    <script>
+    const categorySelect = document.getElementById('category-select');
 
-      sectionOneCards.forEach(card => {
-        const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
+    if (categorySelect) {
+        categorySelect.addEventListener('change', (e) => {
+        const selectedValue = e.target.value.trim().toLowerCase(); 
+        const productCards = document.querySelectorAll('.product-card');
 
-        if (selectedValue === 'all' || cardCategory === selectedValue) {
-          card.style.display = ''; 
-          card.style.visibility = 'visible';
-          card.style.opacity = '1';
+        productCards.forEach(card => {
+            const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
+
+            if (selectedValue === 'all' || cardCategory === selectedValue) {
+            card.style.display = ''; 
+            card.style.visibility = 'visible';
+            card.style.opacity = '1';
         } else {
           card.style.display = 'none';
         }
       });
     });
-  }
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // 1. POP-UP MODAL LOGIC (WITH TWO IMAGES)
-  // ==========================================
-  const modal = document.getElementById('product-modal');
-  const modalTitle = document.getElementById('modal-title');
-  const modalSubtitle = document.getElementById('modal-subtitle');
-  const modalDescription = document.getElementById('modal-description');
-  const modalImg1 = document.getElementById('modal-img1'); // First image
-  const modalImg2 = document.getElementById('modal-img2'); // Second image
-  const closeBtn = document.querySelector('.close-btn');
-  const findMoreButtons = document.querySelectorAll('[class*="find"]');
+    }
+    </script>
 
-  if (modal) {
-    // Open Modal and populate content on click
-    findMoreButtons.forEach(button => {
-      button.addEventListener('click', (event) => {
-        event.preventDefault(); 
+    <!-- Pop-up -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const modal = document.getElementById('product-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalSubtitle = document.getElementById('modal-subtitle');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImg1 = document.getElementById('modal-img1');
+        const modalImg2 = document.getElementById('modal-img2');
+        const closeBtn = document.querySelector('.close-btn');
+        const findMoreButtons = document.querySelectorAll('[class*="find"]');
+
+        if (modal) {
+            findMoreButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+            event.preventDefault(); 
         
-        // Extract all data strings from the clicked button
-        const title = button.getAttribute('data-title') || '';
-        const subtitle = button.getAttribute('data-subtitle') || '';
-        const desc = button.getAttribute('data-desc') || '';
-        const imgSrc1 = button.getAttribute('data-img1') || '';
-        const imgSrc2 = button.getAttribute('data-img2') || '';
         
-        // Inject values into the modal elements safely
-        if (modalTitle) modalTitle.textContent = title;
-        if (modalSubtitle) modalSubtitle.textContent = subtitle;
-        if (modalDescription) modalDescription.innerHTML = desc; // innerHTML keeps your <ul> tags working
+            const title = button.getAttribute('data-title') || '';
+            const subtitle = button.getAttribute('data-subtitle') || '';
+            const desc = button.getAttribute('data-desc') || '';
+            const imgSrc1 = button.getAttribute('data-img1') || '';
+            const imgSrc2 = button.getAttribute('data-img2') || '';
         
-        // Handle image 1
-        if (modalImg1) {
-          modalImg1.src = imgSrc1;
-          modalImg1.alt = `${title} view 1`;
-        }
         
-        // Handle image 2
-        if (modalImg2) {
-          modalImg2.src = imgSrc2;
-          modalImg2.alt = `${title} view 2`;
-        }
+            if (modalTitle) modalTitle.textContent = title;
+            if (modalSubtitle) modalSubtitle.textContent = subtitle;
         
-        modal.classList.add('active');
-      });
+            if (modalImg1) {
+                modalImg1.src = imgSrc1;
+                modalImg1.alt = `${title} view 1`;
+            }
+        
+            if (modalImg2) {
+                modalImg2.src = imgSrc2;
+                modalImg2.alt = `${title} view 2`;
+            }
+        
+            modal.classList.add('active');
+        });
     });
-
-    // Close modal via the X button
+    
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
         closeProductModal();
       });
     }
 
-    // Close modal via clicking the dark background overlay outside the box
     window.addEventListener('click', (event) => {
       if (event.target === modal) {
         closeProductModal();
       }
     });
-  }
+    }
 
-  // Helper function to shut down the modal window smoothly
   function closeProductModal() {
     modal.classList.remove('active');
-    // Clear image sources after transition completes to avoid a visual flash next time it opens
     setTimeout(() => {
       if (modalImg1) {
         modalImg1.src = '';
@@ -766,32 +765,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (modalSubtitle) modalSubtitle.textContent = '';
     }, 300);
-  }
-
-  // ==========================================
-  // 2. DROPDOWN CATEGORY FILTER LOGIC
-  // ==========================================
-  const categorySelect = document.getElementById('category-select');
-
-  if (categorySelect) {
-    categorySelect.addEventListener('change', (e) => {
-      const selectedValue = e.target.value.trim().toLowerCase(); 
-      const productCards = document.querySelectorAll('.product-card');
-
-      productCards.forEach(card => {
-        const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
-
-        if (selectedValue === 'all' || cardCategory === selectedValue) {
-          card.style.display = ''; 
-          card.style.visibility = 'visible';
-          card.style.opacity = '1';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    }
     });
-  }
-});
 </script>
 </body>
 </html>

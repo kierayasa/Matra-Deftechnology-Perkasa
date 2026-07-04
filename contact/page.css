@@ -1,15 +1,15 @@
-/* ==========================================
-   CONTACT FORM STYLES
-   ========================================== */
 
 .contact-section {
   padding: 80px 20px;
-  background-color: #ffffff;
+  background: linear-gradient(rgba(105, 110, 117, 0.7), rgba(133, 136, 140, 0.7)), url(../images/contact-bg.webp);
   display: flex;
   justify-content: center;
 }
 
 .contact-container {
+  background-color: var(--pure-white);
+  padding: 30px;
+  border-radius: 8px;
   width: 100%;
   max-width: 600px;
   text-align: center;
@@ -18,16 +18,17 @@
 .contact-container h2 {
   font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #333333;
+  color: var(--dark-blue);
 }
 
 .contact-container p {
   color: #666666;
   margin-bottom: 40px;
   font-size: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-/* Form Layout Framework */
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -44,10 +45,9 @@
 .form-group label {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #444444;
+  color: var(--dark-blue);
 }
 
-/* Inputs and Textarea Common Styles */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -61,7 +61,6 @@
   background-color: #fafafa;
 }
 
-/* Input Fields Interactive Focus Effect */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -70,15 +69,13 @@
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Locks vertical resizing on message window */
 .form-group textarea {
   resize: vertical;
 }
 
-/* Form Submit Button Execution */
 .submit-btn {
   padding: 16px 32px;
-  background-color: #333333;
+  background-color: var(--dark-blue);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -90,7 +87,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #111111;
+  background-color: var(--secondary-blue);
 }
 
 .submit-btn:active {
@@ -102,7 +99,6 @@
   cursor: not-allowed;
 }
 
-/* Fluid Layout Responsive Handling on Mobile Screen Widths */
 @media (max-width: 480px) {
   .submit-btn {
     width: 100%;

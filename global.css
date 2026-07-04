@@ -1,4 +1,4 @@
-/* Base Reset & Variables */
+/* Base  */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,6 @@ main {
     padding-top: 100px; /* Prevents content from hiding under the fixed header */
 }
 
-/* Typography & Core Layout elements */
 h1, h2, h3 {
     color: #011e42;
 }
@@ -50,7 +49,7 @@ h1, h2, h3 {
     margin: 15px auto 0;
 }
 
-/* Navigation - Desktop Base Style */
+/* Navigation */
 .navbar {
     position: fixed;
     top: 0;
@@ -96,6 +95,7 @@ h1, h2, h3 {
     transition: color 0.3s ease;
 }
 
+.nav-lins a.active,
 .nav-links a:hover {
     color: var(--secondary-blue);
     text-decoration: underline;
@@ -103,12 +103,10 @@ h1, h2, h3 {
     text-underline-offset: 3px;
 }
 
-/* Hide Mobile Elements on Desktop */
 .menu-toggle, .hamburger, .sidebar-overlay {
     display: none;
 }
 
-/* Comprehensive Corporate Footer */
 .site-footer {
     background-color: var(--dark-blue);
     color: var(--pure-white);
@@ -223,7 +221,7 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-/* Global Mobile Media Queries (Mobile Navbar logic) */
+/* Mobile Nav Bar */
 @media (max-width: 992px) {
     .logo-img {
         height: 60px;
