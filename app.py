@@ -18,7 +18,7 @@ contacts_path = os.path.join(base_dir, 'contact')
 app = Flask(__name__, template_folder=contacts_path, static_folder=contacts_path)
 
 # --- CONFIGURATION ---
-CLIENT_COMPANY_EMAIL = "client-company@example.com" 
+CLIENT_COMPANY_EMAIL = "kierayasa@gmail.com" 
 
 @app.route('/')
 def index():
@@ -35,7 +35,7 @@ def submit_form():
         # 2. Package the data and hand it off to Resend
         try:
             email = resend.Emails.send({
-                "from": "Website Contact Form <noreply@yourclientsdomain.com>",
+                "from": "Website Contact Form <onboarding@resend.dev>",
                 "to": [CLIENT_COMPANY_EMAIL],
                 "subject": f"New Contact Form Submission from {visitor_name}",
                 "reply_to": visitor_email,
@@ -56,4 +56,5 @@ def submit_form():
             return "<h3>There was a problem sending your message. Please try again later.</h3>", 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
