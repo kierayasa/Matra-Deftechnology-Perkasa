@@ -617,155 +617,142 @@
 
     </footer>
 
-    <!-- Tab Switching -->
-    <script>
+
+<script>
+    // IMAGE SLIDER 
+    function changeSlide(button, direction) {
+        const container = button.parentElement;
+        const slides = container.querySelectorAll('.slide');
+        
+        let activeIndex = 0;
+        slides.forEach((slide, index) => {
+            if (slide.classList.contains('active')) {
+                activeIndex = index;
+            }
+        });
+
+        slides[activeIndex].classList.remove('active');
+
+        let nextIndex = activeIndex + direction;
+        if (nextIndex >= slides.length) {
+            nextIndex = 0;
+        } else if (nextIndex < 0) {
+            nextIndex = slides.length - 1;
+        }
+
+        slides[nextIndex].classList.add('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
         const tabs = document.querySelectorAll('.tab-btn');
         const sections = document.querySelectorAll('.product-section');
         const categorySelect = document.getElementById('category-select');
+        const modal = document.getElementById('product-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalSubtitle = document.getElementById('modal-subtitle');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImg1 = document.getElementById('modal-img1'); 
+        const modalImg2 = document.getElementById('modal-img2'); 
+        const closeBtn = document.querySelector('.close-btn');
+        const findMoreButtons = document.querySelectorAll('[class*="find"]');
 
+        // --- Tab Switching ---
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 tabs.forEach(t => t.classList.remove('active'));
                 sections.forEach(s => s.classList.remove('active'));
 
                 tab.classList.add('active');
-                    document.getElementById(tab.dataset.target).classList.add('active');
+                document.getElementById(tab.dataset.target).classList.add('active');
 
+                // Reset the dropdown filter to "all" when changing tabs
                 if (categorySelect) {
                     categorySelect.value = 'all'; 
                 }
 
+                // Make sure all product cards are visible on the newly opened tab
                 const allProductCards = document.querySelectorAll('.product-card');
-                    allProductCards.forEach(card => {
-                        card.style.display = ''; 
-                        card.style.visibility = 'visible';
-                        card.style.opacity = '1';
+                allProductCards.forEach(card => {
+                    card.style.display = ''; 
+                    card.style.visibility = 'visible';
+                    card.style.opacity = '1';
                 });
             });
         });
 
-    </script>
+        // --- Dropdown Category Filter ---
+        if (categorySelect) {
+            categorySelect.addEventListener('change', (e) => {
+                const selectedValue = e.target.value.trim().toLowerCase(); 
+                const productCards = document.querySelectorAll('.product-card');
 
-    <!-- Img Slider -->
-    <script>
-        function changeSlide(button, direction) {
-            const container = button.parentElement;
-            const slides = container.querySelectorAll('.slide');
-            
-            let activeIndex = 0;
-            slides.forEach((slide, index) => {
-                if (slide.classList.contains('active')) {
-                    activeIndex = index;
-                }
+                productCards.forEach(card => {
+                    const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
+
+                    if (selectedValue === 'all' || cardCategory === selectedValue) {
+                        card.style.display = ''; 
+                        card.style.visibility = 'visible';
+                        card.style.opacity = '1';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
-
-            slides[activeIndex].classList.remove('active');
-
-            let nextIndex = activeIndex + direction;
-            if (nextIndex >= slides.length) {
-                nextIndex = 0;
-            } else if (nextIndex < 0) {
-                nextIndex = slides.length - 1;
-            }
-
-            slides[nextIndex].classList.add('active');
         }
-    </script>
 
-    <!-- Dropdown Category -->
-    <script>
-    const categorySelect = document.getElementById('category-select');
-
-    if (categorySelect) {
-        categorySelect.addEventListener('change', (e) => {
-        const selectedValue = e.target.value.trim().toLowerCase(); 
-        const productCards = document.querySelectorAll('.product-card');
-
-        productCards.forEach(card => {
-            const cardCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
-
-            if (selectedValue === 'all' || cardCategory === selectedValue) {
-            card.style.display = ''; 
-            card.style.visibility = 'visible';
-            card.style.opacity = '1';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-    }
-    </script>
-
-    <!-- Pop-up -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-        const modal = document.getElementById('product-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalSubtitle = document.getElementById('modal-subtitle');
-        const modalDescription = document.getElementById('modal-description');
-        const modalImg1 = document.getElementById('modal-img1');
-        const modalImg2 = document.getElementById('modal-img2');
-        const closeBtn = document.querySelector('.close-btn');
-        const findMoreButtons = document.querySelectorAll('[class*="find"]');
-
+        // --- Pop-up Modal Window ---
         if (modal) {
             findMoreButtons.forEach(button => {
-            button.addEventListener('click', (event) => {
-            event.preventDefault(); 
-        
-        
-            const title = button.getAttribute('data-title') || '';
-            const subtitle = button.getAttribute('data-subtitle') || '';
-            const desc = button.getAttribute('data-desc') || '';
-            const imgSrc1 = button.getAttribute('data-img1') || '';
-            const imgSrc2 = button.getAttribute('data-img2') || '';
-        
-        
-            if (modalTitle) modalTitle.textContent = title;
-            if (modalSubtitle) modalSubtitle.textContent = subtitle;
-        
-            if (modalImg1) {
-                modalImg1.src = imgSrc1;
-                modalImg1.alt = `${title} view 1`;
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); 
+                
+                    const title = button.getAttribute('data-title') || '';
+                    const subtitle = button.getAttribute('data-subtitle') || '';
+                    const desc = button.getAttribute('data-desc') || '';
+                    const imgSrc1 = button.getAttribute('data-img1') || '';
+                    const imgSrc2 = button.getAttribute('data-img2') || '';
+                
+                    if (modalTitle) modalTitle.textContent = title;
+                    if (modalSubtitle) modalSubtitle.textContent = subtitle;
+                    if (modalDescription) modalDescription.textContent = desc; 
+                
+                    if (modalImg1) {
+                        modalImg1.src = imgSrc1;
+                        modalImg1.alt = `${title} view 1`;
+                    }
+                
+                    if (modalImg2) {
+                        modalImg2.src = imgSrc2;
+                        modalImg2.alt = `${title} view 2`;
+                    }
+                
+                    modal.classList.add('active');
+                });
+            });
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    closeProductModal();
+                });
             }
-        
-            if (modalImg2) {
-                modalImg2.src = imgSrc2;
-                modalImg2.alt = `${title} view 2`;
-            }
-        
-            modal.classList.add('active');
-        });
-    });
-    
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        closeProductModal();
-      });
-    }
 
-    window.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        closeProductModal();
-      }
-    });
-    }
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeProductModal();
+                }
+            });
+        }
 
-  function closeProductModal() {
-    modal.classList.remove('active');
-    setTimeout(() => {
-      if (modalImg1) {
-        modalImg1.src = '';
-        modalImg1.alt = '';
-      }
-      if (modalImg2) {
-        modalImg2.src = '';
-        modalImg2.alt = '';
-      }
-      if (modalSubtitle) modalSubtitle.textContent = '';
-    }, 300);
-    }
+        function closeProductModal() {
+            modal.classList.remove('active');
+            
+            setTimeout(() => {
+                if (modalImg1) { modalImg1.src = ''; modalImg1.alt = ''; }
+                if (modalImg2) { modalImg2.src = ''; modalImg2.alt = ''; }
+                if (modalSubtitle) modalSubtitle.textContent = '';
+                if (modalDescription) modalDescription.textContent = '';
+            }, 300);
+        }
     });
 </script>
 </body>
