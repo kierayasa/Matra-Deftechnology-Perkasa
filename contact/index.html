@@ -97,56 +97,7 @@
         </div>
     </footer>
 
-    <script>
-    const form = document.getElementById('contact-form');
-    const result = document.getElementById('form-result');
-    const submitBtn = document.getElementById('submit-btn');
-
-    if (form) {
-        form.addEventListener('submit', function(e) {
-        e.preventDefault(); 
-    
-        submitBtn.disabled = true;
-        submitBtn.innerText = "Sending...";
-        result.style.color = "#333";
-        result.innerText = "Sending your message...";
-
-        const formData = new URLSearchParams(new FormData(form));
-
-        fetch('/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: formData
-        })
-
-        .then(async (response) => {
-        if (response.ok) {
-            result.style.color = "#28a745"; 
-            result.innerText = "Message sent successfully!";
-            form.reset(); 
-        } else {
-            result.style.color = "#dc3545"; 
-            result.innerText = "Failed to send message.";
-        }
-        })
-        
-        .catch(error => {
-        console.error("Error:", error);
-        result.style.color = "#dc3545";
-        result.innerText = "Something went wrong. Please try again later.";
-        })
-        
-        .then(function() {
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
-        setTimeout(() => {
-            result.innerText = ""; 
-        }, 5000);
-        });
-    });
-    }
+    <script src="../script.js">
     </script>
 </body>
 </html>
