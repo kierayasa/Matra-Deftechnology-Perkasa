@@ -3,14 +3,17 @@ const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    const formData = new URLSearchParams(new FormData(contactForm));
+    // Create a new empty FormData object
+    const formData = new FormData();
+    
+    // Explicitly grab the values and append them to match worker.js expectations
+    formData.append('name', document.getElementsByName('name')[0].value);
+    formData.append('email', document.getElementsByName('email')[0].value);
+    formData.append('message', document.getElementsByName('message')[0].value);
 
     fetch('https://contact-form-api.elson-matra.workers.dev', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: formData
+        body: formData // Browser automatically structures this as multipart/form-data
     })
     .then(response => {
         if (response.ok) {
